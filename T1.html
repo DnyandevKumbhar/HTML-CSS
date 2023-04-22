@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function Validate()
+        {
+
+            if((document.mform.uname.value=="Dnyandev Kumbhar") && (document.mform.Password.value=="Deva"))
+            {
+                return true;
+            }
+            else if(document.mform.uname.value=="")
+            {
+                alert("Please provide your Username ID.");
+            document.mform.uname.focus();
+            return false;
+            }
+            else if(document.mform.Password.value=="")
+            {
+                alert("Please provide your Password ID.");
+                document.mform.uname.focus();
+                return false;
+            }
+            else
+            {
+                alert("Wrong ID and Password");
+                return false;
+            }
+
+        }
+    </script>
+
+    <style>
+        body
+        {
+            background-color: rgb(209, 252, 237);
+        }
+        div
+        {
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+        
+        .m
+        {
+            padding-left: 450px;
+            padding-right: 400px ;
+        }
+        .b
+        {
+          background-color: white;
+            border-style:solid;
+            border-color: rgb(50, 238, 175);
+            padding-left:  60px; 
+             padding-bottom: 100px ;
+             border-radius: 5px;
+        }
+    ul{
+    
+          list-style: none; 
+     }
+     li
+     {
+        padding: 10px;;
+        display: inline;
+     }
+     .l
+     {
+        padding-left: 375px;
+      
+     }
+   
+     .i
+     {
+        padding: 10px;
+        border-style:none;
+        border-radius: 7px;
+        background-color: rgb(74, 238, 183);
+        width: 220px;
+
+     }
+     .in
+     {
+       outline: none;
+        width: 200px;
+        padding: 8px;
+        border-style: none;
+        border-bottom-style: ridge;
+        
+     }
+     h2
+     {
+        color:rgb(74, 238, 183);
+     }
+    </style>
+</head>
+<body><form action="msg.html" name="mform" onsubmit="return(Validate());">
+    <div class="c">
+    <div class="l">
+        <ul>
+            <li><a href="http://">Login</a></li> 
+            <li><a href="http://">SignUp</a></li>
+            <li><a href="http://">Forgot password</a></li>
+            <li><a href="http://">Subscribe</a></li>
+            <li><a href="http://">ContactUs</a></li>
+            
+        </ul>
+    </div>
+    <div class="m">
+        
+        <div class="b">
+        <h2>Sign In</h2>
+        <div>
+            <input type="text" name="uname" placeholder="username" class="in">
+        </div>
+       
+        <div>
+            <input type="password" name="Password" placeholder="password" class="in">
+        </div>
+        <div><button type="submit" class="i">Login here</button></div>
+        
+        <div><a href="http://">Forgot password</a></div>
+        <div><a href="http://">New user?SignUp</a></div>
+    </div>
+</div>
+</div>
+</form>
+</body>
+</html>
